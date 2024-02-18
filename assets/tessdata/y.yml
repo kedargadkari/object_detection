@@ -1,0 +1,187 @@
+cards:
+  - type: horizontal-stack
+    cards:
+      - type: button
+        tap_action:
+          action: call-service
+          service: remote.send_command
+          service_data:
+            command: home
+            entity_id: remote.living_room
+        hold_action:
+          action: call-service
+          service: remote.send_command
+          service_data:
+            command: home_hold
+            entity_id: remote.living_room
+        show_icon: true
+        show_name: false
+        entity: remote.living_room
+        icon: mdi:home
+        name: Home
+      - type: button
+        entity: remote.living_room
+        hold_action:
+          action: none
+        icon: mdi:arrow-up
+        name: Up arrow
+        show_icon: true
+        show_name: false
+        tap_action:
+          action: call-service
+          service: remote.send_command
+          service_data:
+            command: up
+            entity_id: remote.living_room
+      - type: button
+        tap_action:
+          action: call-service
+          service: remote.send_command
+          service_data:
+            command: volume_up
+            entity_id: remote.living_room
+        hold_action:
+          action: none
+        show_icon: true
+        show_name: false
+        entity: remote.living_room
+        name: Volume up
+        icon: mdi:volume-plus
+  - cards:
+      - entity: remote.living_room
+        hold_action:
+          action: none
+        icon: mdi:arrow-left
+        name: Left arrow
+        show_icon: true
+        show_name: false
+        tap_action:
+          action: call-service
+          service: remote.send_command
+          service_data:
+            command: left
+            entity_id: remote.living_room
+        type: button
+      - entity: remote.living_room
+        hold_action:
+          action: none
+        icon: mdi:apple
+        name: Select
+        show_icon: true
+        show_name: false
+        tap_action:
+          action: call-service
+          service: remote.send_command
+          service_data:
+            command: select
+            entity_id: remote.living_room
+        type: button
+      - entity: remote.living_room
+        hold_action:
+          action: none
+        icon: mdi:arrow-right
+        name: Right arrow
+        show_icon: true
+        show_name: false
+        tap_action:
+          action: call-service
+          service: remote.send_command
+          service_data:
+            command: right
+            entity_id: remote.living_room
+        type: button
+    type: horizontal-stack
+  - cards:
+      - entity: remote.living_room
+        hold_action:
+          action: none
+        icon: mdi:menu
+        name: Menu
+        show_icon: true
+        show_name: false
+        tap_action:
+          action: call-service
+          service: remote.send_command
+          service_data:
+            command: menu
+            entity_id: remote.living_room
+        type: button
+      - entity: remote.living_room
+        hold_action:
+          action: none
+        icon: mdi:arrow-down
+        name: Down arrow
+        show_icon: true
+        show_name: false
+        tap_action:
+          action: call-service
+          service: remote.send_command
+          service_data:
+            command: down
+            entity_id: remote.living_room
+        type: button
+      - entity: remote.living_room
+        tap_action:
+          action: call-service
+          service: remote.send_command
+          service_data:
+            command: suspend
+            entity_id: remote.living_room
+        show_icon: true
+        show_name: false
+        
+        name: Sleep
+        icon: mdi:sleep
+        hold_action:
+          action: none
+        type: button
+    type: horizontal-stack
+  - type: horizontal-stack
+    cards:
+      - type: button
+        tap_action:
+          action: call-service
+          service: remote.send_command
+          service_data:
+            command: play_pause
+            entity_id: remote.living_room
+        hold_action:
+          action: none
+        show_icon: true
+        show_name: false
+        entity: remote.living_room
+        name: Play/Pause
+        icon: mdi:play-pause
+      - type: button
+        tap_action:
+          action: call-service
+          service: remote.send_command
+          service_data:
+            command: next
+            entity_id: remote.living_room
+        hold_action:
+          action: none
+        show_icon: true
+        show_name: false
+        entity: remote.living_room
+        icon: mdi:skip-next
+        name: Next
+      - type: button
+        tap_action:
+          action: call-service
+          service: remote.send_command
+          service_data:
+            command: volume_down
+            entity_id: remote.living_room
+        hold_action:
+          action: none
+        show_icon: true
+        show_name: false
+        entity: remote.living_room
+        name: Volume down
+        icon: mdi:volume-minus
+type: vertical-stack
+
+
+
+
